@@ -4,7 +4,8 @@
     <blockquote class="blockquote text-center">
         <h2 class="mb-0" id="high-text">ATTENDANCE</h2>
     </blockquote>
-    {% for item in data  %}
-        <p>{{ item.0 }}:{{ item.1 }}</p>
-    {% endfor %}
+    {% for key,value in data.items %}
+    <dt>{{ key }}</dt>
+    <dd>{{ value }}</dd>
+  {% endfor %}
 {% endblock %}
