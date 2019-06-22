@@ -87,7 +87,7 @@ def attendance(request):
     for i in range(0,len(refined_data)):
         if len(refined_data[i])>3:
             dict_data[refined_data[i]] = refined_data[i+1]
-    return render(request,'kiosk/attendance.html',{'data': sorted(dict_data.items())})
+    return render(request,'kiosk/attendance.html',{'data': dict_data})
 
 def personalData(request):
     global session
