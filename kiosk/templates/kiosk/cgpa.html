@@ -1,0 +1,25 @@
+{% extends 'kiosk/base.html' %}
+
+{% block content%}
+    <blockquote class="blockquote text-center">
+        <h2 class="mb-0" id="high-text">RESULTS</h2>
+    </blockquote>
+    <div class="tb" id="result">
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">SEMESTER</th>
+                <th scope="col">CGPA</th>
+                </tr>
+            </thead>
+            {% for item in data  %}
+            <tbody>
+                <tr>
+                <td>{{ item.0 }}</td>
+                <td>{{ item.1 }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

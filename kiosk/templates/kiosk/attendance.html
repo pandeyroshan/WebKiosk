@@ -1,0 +1,10 @@
+{% extends 'kiosk/base.html' %}
+
+{% block content%}
+    <blockquote class="blockquote text-center">
+        <h2 class="mb-0" id="high-text">ATTENDANCE</h2>
+    </blockquote>
+    {% for item in data  %}
+        <p>{{ item.0 }}:{{ item.1 }}</p>
+    {% endfor %}
+{% endblock %}
